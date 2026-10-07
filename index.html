@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-preset="secret-store">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Desktop Workspace</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="renderer.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="titlebar">
+      <strong class="brand">Desktop Workspace</strong>
+      <input class="search" id="search" type="search" placeholder="Search library…" aria-label="Search library">
+      <div class="top-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch appearance" title="Switch appearance">◐</button>
+      </div>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <p class="caption">Workspace</p>
+        <nav aria-label="Main navigation">
+          <button class="nav-item" data-page="overview" aria-current="page" type="button"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 10 12 3l9 7v10H3Z M9 20v-7h6v7"/></svg>Overview</button>
+          <button class="nav-item" data-page="library" type="button"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16 M13 9h5 M13 13h5"/></svg>Library</button>
+          <button class="nav-item" data-page="settings" type="button"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16 M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="16" cy="17" r="3"/></svg>Settings</button>
+        </nav>
+        <p class="sidebar-note">A calm workspace for your everyday tools.</p>
+        <footer class="sidebar-footer"><strong>Your product</strong><span>Make this workspace your own.</span></footer>
+      </aside>
+      <main id="overview" class="page" tabindex="-1">
+        <div class="content">
+          <div class="page-heading"><div><p class="eyebrow">Workspace</p><h1>Overview</h1><p>Everything you need, in one place.</p></div><button class="primary" data-action="add" type="button">Add item</button></div>
+          <section class="hero"><h2>A little more clarity.</h2><p>Organize your tools and keep the details close. Start with the library or adjust the workspace to suit you.</p><button class="outlined" data-go="library" type="button">Open library</button></section>
+          <div class="cards">
+            <section class="surface"><h2>Library items</h2><strong class="metric" id="item-count">3</strong><p>Ready to explore</p></section>
+            <section class="surface"><h2>Appearance</h2><strong class="metric" id="appearance-summary">System</strong><p>Comfortable in any light</p></section>
+            <section class="surface"><h2>Workspace status</h2><strong class="metric">Ready</strong><span class="pill">All set</span></section>
+          </div>
+          <section class="surface"><h2>Activity</h2><p>Your workspace is ready. New items will appear in the library.</p><div class="status-row"><span class="pill">Available</span><span class="pill warning">Needs attention</span><span class="pill danger">Unavailable</span></div></section>
+        </div>
+      </main>
+      <main id="library" class="page library" tabindex="-1" hidden>
+        <section class="list-pane" aria-label="Library items">
+          <div class="list-heading"><p class="eyebrow">Collection</p><div class="page-heading"><h1>Library</h1><button class="primary" data-action="add" type="button" aria-label="Add item">+</button></div><p id="result-count">3 items</p></div>
+          <div class="entry-list" id="entry-list"></div>
+        </section>
+        <article class="detail" id="detail" aria-label="Item details"></article>
+      </main>
+      <main id="settings" class="page" tabindex="-1" hidden>
+        <div class="content settings"><p class="eyebrow">Preferences</p><h1>Settings</h1><p>Choose the look that feels most comfortable.</p>
+          <section class="settings-row"><div><h2>Design preset</h2><p>Choose your workspace’s colors and surfaces.</p></div><label class="visually-hidden" for="preset">Design preset</label><select id="preset"><option value="secret-store">Secret Store</option><option value="swarm-tools">Swarm Tools</option></select></section>
+          <section class="settings-row"><div><h2>Appearance</h2><p>Follow your device or choose a fixed appearance.</p></div><label class="visually-hidden" for="appearance">Appearance</label><select id="appearance"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></section>
+          <section class="settings-row"><div><h2>About this workspace</h2><p>This starter includes sample items. Replace them with your product’s content.</p></div></section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <dialog id="item-dialog" aria-labelledby="dialog-title">
+    <form id="item-form"><h2 id="dialog-title">Add an item</h2><p>Keep a tool or resource in your library.</p>
+      <label class="field">Name<input id="item-name" name="name" maxlength="80" required autocomplete="off"></label>
+      <label class="field">Description<textarea name="description" maxlength="240" rows="3"></textarea></label>
+      <div class="dialog-actions"><button class="outlined" id="cancel-dialog" type="button">Cancel</button><button class="primary" type="submit">Add item</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

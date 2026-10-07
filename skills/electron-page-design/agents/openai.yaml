@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quiet Blue Electron Design"
+  short_description: "Quiet Blue desktop theme and reusable Electron pages"
+  default_prompt: "Use $electron-page-design to build an Electron page with the Quiet Blue desktop theme and the layout suited to my product."

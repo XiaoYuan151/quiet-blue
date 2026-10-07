@@ -1,0 +1,14 @@
+{
+  "name": "quiet-blue-electron-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quiet Blue Electron theme with Secret Store and Swarm Tools presets",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "preview": "node scripts/preview.js",
+    "check": "node scripts/check.js",
+    "package:skill": "python3 scripts/package_skill.py"
+  },
+  "devDependencies": { "electron": "44.5.1" }
+}

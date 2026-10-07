@@ -1,0 +1,50 @@
+{
+  "extracted_on": "2026-10-07",
+  "files": [
+    {
+      "project": "secret-store",
+      "file": "styles.css",
+      "sha256": "1670c9340db1137a30cdc883a0747f637466cdadff599934cef80b51e9982f3c"
+    },
+    {
+      "project": "secret-store",
+      "file": "theme.css",
+      "sha256": "d2fecf47f367ff95031f602ea545a00c9542ec1914ba781b4401731a8db7bcd8"
+    },
+    {
+      "project": "secret-store",
+      "file": "index.html",
+      "sha256": "8d3d14f1c1713fd725c0d09cdd6245263dc6186c65d05e20c1405de8d5018f77"
+    },
+    {
+      "project": "secret-store",
+      "file": "app.js",
+      "sha256": "c2bd12d20972864a41b23c1dbaad0d7e1681488bda4d991a5b4f3645e0df5681"
+    },
+    {
+      "project": "secret-store",
+      "file": "main.js",
+      "sha256": "9b7a4f06159b7935197da98dfd7deb80dfb9c12af528cebf64826cd018e8f8e8"
+    },
+    {
+      "project": "swarm-tools",
+      "file": "styles.css",
+      "sha256": "bb7166153000917ef7a9c23ca44739bc041de931de17b3794535184fefe29ee4"
+    },
+    {
+      "project": "swarm-tools",
+      "file": "index.html",
+      "sha256": "92b07e219b3614e6b6194f3008577f96422c740741129d277a97d30110b2a3af"
+    },
+    {
+      "project": "swarm-tools",
+      "file": "renderer.js",
+      "sha256": "0f378b4e4bc1d701fc89772dc82201605c39ca347a9b285f779eeb5645be4e28"
+    },
+    {
+      "project": "swarm-tools",
+      "file": "main.js",
+      "sha256": "98d55d8d6aec8bb39cad5dc1d440662614bb336e1b0225452a7b4a5825bfabc0"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+/* Quiet Blue — extracted semantic roles; see docs/design-guidelines.md for source mappings. */
+:root {
+  color-scheme: light;
+  --font-ui: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-code: ui-monospace, SFMono-Regular, monospace;
+  --canvas: #f7f9fc; --surface: #fff; --sidebar: #f5f7fa;
+  --text: #1b2331; --muted: #647489; --subtle: #8998ab;
+  --border: #e7ebf1; --input-border: #dfe6ee; --input-bg: #fff;
+  --soft: #f8fafc; --hover: #ebeff5;
+  --accent: #386bd6; --accent-hover: #2e5ec2; --accent-text: #2556b7;
+  --selection: #e4edfc; --selection-border: #bbcff6;
+  --success-bg: #eaf5ed; --success-text: #39855a;
+  --warning-bg: #fff3df; --warning-text: #b47816;
+  --danger-bg: #fcebe9; --danger-text: #b45b50;
+  --hero: linear-gradient(112deg, #eaf3ff 5%, #f1f7ff 56%, #dcecff 100%);
+  --shadow: 0 3px 13px #1d3a6210; --modal-shadow: 0 24px 75px #14213b45;
+  --overlay: #17243d6b; --toast-bg: #293b56; --toast-text: #fff;
+  --focus: #7fa6e9; --focus-ring: #eaf1fc;
+  --sidebar-width: 248px; --list-width: 350px; --titlebar-height: 48px;
+  --radius-sm: 6px; --radius-control: 8px; --radius-card: 11px; --radius-modal: 15px;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-6: 24px; --space-8: 32px;
+}
+:root[data-preset="swarm-tools"] {
+  --sidebar: #fff; --text: #202b3c; --border: #e8edf4;
+  --accent: #4285f4; --accent-hover: #3172d8; --accent-text: #3172d8;
+  --selection: #eaf2ff; --hover: #f5f8fd; --sidebar-width: 256px;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #11161e; --surface: #19212c; --sidebar: #151d27;
+  --text: #e8edf5; --muted: #99aabe; --subtle: #8596ab;
+  --border: #303c4b; --input-border: #3a4a5e; --input-bg: #202b39;
+  --soft: #1d2936; --hover: #223044;
+  --accent: #527fe0; --accent-hover: #6490ea; --accent-text: #cce0ff;
+  --selection: #294270; --selection-border: #5279b5;
+  --success-bg: #1c3b33; --success-text: #91dfb0;
+  --warning-bg: #4b3920; --warning-text: #f4c77d;
+  --danger-bg: #4a2c2c; --danger-text: #f5a3a0;
+  --hero: linear-gradient(115deg, #172b46, #1c3454 56%, #214b76);
+  --shadow: none; --overlay: #050a11b8; --toast-bg: #dbe8ff; --toast-text: #1e2d43;
+  --focus: #6d94e8; --focus-ring: #4677d437;
+}
+:root[data-preset="swarm-tools"][data-theme="dark"] {
+  --canvas: #101722; --surface: #192330; --sidebar: #192330;
+  --text: #e8eef7; --border: #2a394a;
+  --input-bg: #14202c; --input-border: #35475b;
+  --selection: #203b60; --accent-text: #93beff; --hover: #223348;
+  --accent: #4285f4; --accent-hover: #3172d8;
+  --toast-bg: #34465b; --toast-text: #f0f6ff;
+}
